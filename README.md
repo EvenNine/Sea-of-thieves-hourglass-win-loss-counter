@@ -13,7 +13,7 @@ script.py
 	-Determines if a win or loss happens then updates scoreboard.ini
 
 app.py
-	-Small webapp that displays the information from "wins.txt" and "losses.txt", it does this using the in HTML file located in templates and the CSS file located in \static\styles
+	-Small webapp that displays the information from scoreboard.ini, it does this using the in HTML file located in templates and the CSS file located in \static\styles
 	-style.css can be updated to ones liking to display the information in any required format. an example background.png is also provided. user can adjust size of webpage in the css file
 	
 The information can be shown in any web browser, or in OBS Browser source at http://127.0.0.1:5000 (localhost:5000)
