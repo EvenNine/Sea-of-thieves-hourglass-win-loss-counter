@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <meta charset="UTF-8">
+	<meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOT HG counter</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function updateWins() {
+			$.get('/get_number', function(data) {
+				$('#winslife').text(data.winslife);
+				$('#losseslife').text(data.losseslife);
+				$('#winscurrent').text(data.winscurrent);
+				$('#lossescurrent').text(data.lossescurrent);
+				$('#streakcurrent').text(data.streakcurrent);
+				
+			});
+		}
+
+		
+		
+
+        // Timer to update page every 2 seconds
+        $(document).ready(function() {
+            updateWins(); // Initial number fetch
+            setInterval(updateWins, 2000); // Fetch the number every 2 seconds
+        });
+    </script>
+</head>
+<body>
+	<h1 style="margin-top: 10px;">All time Wins: <span id="winslife">Loading...</span></h1>
+    <h1 style="margin-top: 10px;">All time Losses: <span id="losseslife">Loading...</span></h1>
+	<h1 style="margin-top: 10px;">Current Session Wins: <span id="winscurrent">Loading...</span></h1>
+	<h1 style="margin-top: 10px;">Current Session Losses: <span id="lossescurrent">Loading...</span></h1>
+	<h1 style="margin-top: 10px;">Current Streak: <span id="streakcurrent">Loading...</span></h1>
+</body>
+</html>

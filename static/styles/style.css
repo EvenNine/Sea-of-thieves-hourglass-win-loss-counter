@@ -1,0 +1,40 @@
+/* General body styling */
+body {
+    margin: 10;
+    padding: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height *
+    background-size: cover; /* Ensures the image covers the entire background */
+    font-family: Arial, sans-serif; /* Optional: Set a clean font */
+    color: white;
+}
+
+/* Restrict display size */
+.container {
+    width: 300px;
+    height: 100px;
+    overflow: hidden; /* Prevent content overflow */
+    border: 100px solid rgba(255, 255, 255, 0.6); /* Optional: Semi-transparent white border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent black background */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+/* Styling for text */
+h1 {
+    font-size: 16px;
+    margin: 15px;
+    text-shadow: 2px 2px 4px black;
+    color: white;
+    white-space: nowrap; /* Ensure text stays in a single line */
+}
+
+h1 span {
+    margin-right: 10px; /* Adds space between the two elements (e.g., <span>) */
+}
