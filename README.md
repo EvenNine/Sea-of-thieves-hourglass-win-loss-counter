@@ -1,5 +1,7 @@
 # Sea-of-thieves-hourglass-win-loss-counter-
 A program that reads if you win or loose a hourglass match in sot and then displays it in a easy way for a stream to see
+Credit to ekim941 ( https://github.com/ekim941 ) for the original script responsible for detecting wins and losses
+
 
 HOW THIS WORKS
 
