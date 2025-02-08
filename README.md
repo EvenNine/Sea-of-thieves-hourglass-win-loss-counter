@@ -4,6 +4,12 @@ Credit to ekim941 ( https://github.com/ekim941 ) for the original script respons
 
 
 HOW THIS WORKS
+Controls, You can manually add or remove wins using keys assigned in config.ini. by default the controls are, note this does not support numpad or function buttons currently. this will come in a future release.
+Add win = 5
+Add loss = 6
+Increase streak = 7
+
+
 
 auto_installer.bat installs all dependencies
 
