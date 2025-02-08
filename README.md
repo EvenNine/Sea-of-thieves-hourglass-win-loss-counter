@@ -35,9 +35,9 @@ scoreboard.ini
 install python3 from https://www.python.org/downloads/, i reccomend installing the py launcher package along side.
 update pip with one of the 3 next commands, by running them in either powershell or command prompt. (depending how you installed python)
 
-pip install --upgrade pip
-\npy -m pip install --upgrade pip
-\npython3 -m pip install --upgrade pip
+	pip install --upgrade pip
+	py -m pip install --upgrade pip
+	python3 -m pip install --upgrade pip
 
 Then install python the dependencies using one of the 3 commands, this command aswell gets entered into either powershell or command prompt. 
 
