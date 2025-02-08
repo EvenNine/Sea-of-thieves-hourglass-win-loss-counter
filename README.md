@@ -48,6 +48,6 @@ Then install python the dependencies using one of the 3 commands, this command a
 Then install Tesseract (OCR used in this script) from the following github repo: 
 	https://github.com/UB-Mannheim/tesseract/releases/tag/v5.4.0.20240606.
 
-Lastly, Run the program using "Run.bat". if run.bat does not run properly then edit the Run.bat file and replace the "py run.py" command written inside with one of the following command.
+Lastly, Run the program using "Run.bat". if run.bat does not run properly then edit the Run.bat file and replace the "py run.py" command written inside with the following command:
 
 python3 run.py
