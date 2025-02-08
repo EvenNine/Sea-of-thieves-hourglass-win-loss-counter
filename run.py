@@ -35,6 +35,10 @@ def create_config():
     
     config['Settings'] = {}
     config['Settings']['Tesseract_Path'] = "C:\Program Files\Tesseract-OCR\tesseract.exe"
+    endscript = config['Settings']['End_Script'] = "`"
+    config['Settings']['Add_Win'] = "5"
+    config['Settings']['Add_Loss'] = "6"
+    config['Settings']['Increase_Streak'] = "7"
     with open('config.ini', 'w') as configwr:
         config.write(configwr)
     return 0
@@ -84,6 +88,10 @@ def check_config():
     
     try:
         ConfigTesseractPath = config['Settings']['Tesseract_Path']
+        endscript = config['Settings']['End_Script']
+        addwin = config['Settings']['Add_Win']
+        addloss = config['Settings']['Add_Loss']
+        IncreaseStreak = config['Settings']['Increase_Streak']
 
         
     except Exception as e:
