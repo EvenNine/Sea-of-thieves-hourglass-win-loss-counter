@@ -39,11 +39,13 @@ pip install --upgrade pip
 py -m pip install --upgrade pip
 python3 -m pip install --upgrade pip
 
-Then install the dependencies using one of the 3 commands, this command aswell gets entered into either powershell or command prompt. 
+Then install python the dependencies using one of the 3 commands, this command aswell gets entered into either powershell or command prompt. 
 
 pip install pyautogui pytesseract pillow colorama flask pynput
 py -m pip install pyautogui pytesseract pillow colorama flask pynput
 python3 -m pip install pyautogui pytesseract pillow colorama flask pynput
+
+Then install Tesseract (OCR used in this script) from the following github repo https://github.com/UB-Mannheim/tesseract/releases/tag/v5.4.0.20240606.
 
 Lastly, Run the program using "Run.bat". if run.bat does not run properly then edit the Run.bat file and replace the "py run.py" command written inside with one of the following command.
 
