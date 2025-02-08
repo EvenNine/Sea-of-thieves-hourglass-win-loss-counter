@@ -1,4 +1,4 @@
-# Sea-of-thieves-hourglass-win-loss-counter-
+# Sea-of-thieves-hourglass-win-loss-counter
 A program that reads if you win or loose a hourglass match in sot and then displays it in a easy way for a stream to see
 Credit to ekim941 ( https://github.com/ekim941 ) for the original script responsible for detecting wins and losses
 
@@ -29,3 +29,22 @@ config.ini
 	
 scoreboard.ini
 	-where the information for wins and losses are stored
+
+# How to install manually (Windows 10 / 11) and run
+
+install python3 from https://www.python.org/downloads/, i reccomend installing the py launcher package along side.
+update pip with one of the 3 next commands, by running them in either powershell or command prompt. (depending how you installed python)
+
+pip install --upgrade pip
+py -m pip install --upgrade pip
+python3 -m pip install --upgrade pip
+
+Then install the dependencies using one of the 3 commands, this command aswell gets entered into either powershell or command prompt. 
+
+pip install pyautogui pytesseract pillow colorama flask pynput
+py -m pip install pyautogui pytesseract pillow colorama flask pynput
+python3 -m pip install pyautogui pytesseract pillow colorama flask pynput
+
+Lastly, Run the program using "Run.bat". if run.bat does not run properly then edit the Run.bat file and replace the "py run.py" command written inside with one of the following command.
+
+python3 run.py
