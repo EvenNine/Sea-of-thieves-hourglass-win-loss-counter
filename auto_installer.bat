@@ -1,28 +1,16 @@
 @echo off
 setlocal enabledelayedexpansion
 
-:: Check for administrative privileges
-net session >nul 2>&1
-if %errorLevel% neq 0 (
-    echo Requesting administrative privileges...
-    powershell -Command "Start-Process cmd -ArgumentList '/c \"%~f0\"' -Verb RunAs"
-    exit /b
-)
-
-:: Check if Python is installed
-
-echo installing python 3.13.2
-set "URL=https://www.python.org/ftp/python/3.13.2/python-3.13.2-amd64.exe"
-set "INSTALLER=python-3.13.2-amd64.exe"
 
 :: Download the latest installer
 echo Downloading %INSTALLER%...
-curl -o %INSTALLER% %URL%
+curl -L -o python.exe https://www.python.org/ftp/python/3.13.2/python-3.13.2-amd64.exe
 
 :: Run the installer silently
 echo Installing Python... 
 echo make sure to install python launcher (py launcher)
-start /wait %INSTALLER%
+start /wait python.exe /quiet InstallAllUsers=1 PrependPath=1 Include_launcher=1
+
 
 :: Cleanup
 echo Cleaning up...
@@ -33,7 +21,7 @@ echo Python installation completed.
 :: Install Python dependencies
 echo Installing Python dependencies...
 py -m pip install --upgrade pip
-py -m pip install pyautogui pytesseract pillow colorama flask
+py -m pip install pyautogui pytesseract pillow colorama flask pynput
 
 :: Set Tesseract path (adjust if Tesseract is installed in a different location)
 set TESSERACT_PATH="C:\Program Files\Tesseract-OCR\tesseract.exe"
